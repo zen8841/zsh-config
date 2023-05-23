@@ -96,3 +96,6 @@ function clear-screen-and-scrollback() {
 
 zle -N clear-screen-and-scrollback
 bindkey '^L' clear-screen-and-scrollback
+
+
+bindkey \^U backward-kill-line
