@@ -50,8 +50,8 @@ zle -N down-line-or-beginning-search
 key[Control-Left]="${terminfo[kLFT5]}"
 key[Control-Right]="${terminfo[kRIT5]}"
 
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
+#bindkey "$terminfo[kcuu1]" history-substring-search-up
+#bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # for-backward word
 [[ -n "${key[Control-Left]}"  ]] && bindkey -- "${key[Control-Left]}"  backward-word
@@ -96,6 +96,4 @@ function clear-screen-and-scrollback() {
 
 zle -N clear-screen-and-scrollback
 bindkey '^L' clear-screen-and-scrollback
-
-
-bindkey \^U backward-kill-line
+bindkey '^U' backward-kill-line
